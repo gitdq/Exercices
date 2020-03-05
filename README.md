@@ -26,3 +26,5 @@
  8) lancer ==> node hello_world.js
     Résultat: 
     server is running on 0.0.0.0:3000
+ 9) Tester via le navigateur: http://192.168.0.11:3000 (192.168.0.11 = IP du host)
+    ==> resultat : Hello World
