@@ -28,3 +28,35 @@
     server is running on 0.0.0.0:3000
  9) Tester via le navigateur: http://192.168.0.11:3000 (192.168.0.11 = IP du host)
     ==> resultat : Hello World
+    
+    
+ **************************************************************************************************************************
+
+exo2: L'objectif est de démarrer une application via Dockerfile from Scratch
+      Constuire ne image à partir en allant récupérer le Centos en .zip
+
+- Récupérer le fichier : CentOS-7-20140625-x86_64-docker_01.img.tar.xz
+   - wget https://buildlogs.centos.org/centos/7/docker/CentOS-7-20140625-x86_64-docker_01.img.tar.xz
+
+- Créer une fichier Dockerfile 
+   - vi Dockerfile
+- Ajouter dans le fichier Dockerfile les lignes ci-dessous :
+   - FROM scratch
+   
+- Prends le fichier "CentOS-7-20140625-x86_64-docker_01.img.tar.xz", et extrait le à la racine "/"
+   - ADD CentOS-7-20140625-x86_64-docker_01.img.tar.xz /
+   (Docker construira votre image en s'appuyant sur le fichier zip Centos récupéré avec wget)
+   
+- Lancer un Build pour construire i'image
+   - docker build .
+   
+- Donner un nom à votre build, de manière à ne pas avoir à mémoriser par coeur les id   
+   - docker tag 0f64c7ae0987 localhost:5000/imcentos
+   
+- Pusher dans le registry
+   - docker push localhost:5000/imcentos
+   
+- Demarrer le conteneur avec l'image
+   -  docker run -it localhost:5000/imcentos:latest bash
+     
+
