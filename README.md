@@ -59,4 +59,20 @@ exo2: L'objectif est de démarrer une application via Dockerfile from Scratch
 - Demarrer le conteneur avec l'image
    -  docker run -it localhost:5000/imcentos:latest bash
      
-
+ **************************************************************************************************************************
+ 
+ exo3:l'objectif est de démarrer une application Node (en utilisant un Dockerfile)
+ 
+ 1) Créer un dossier my-projet-node
+    - mkdir my-projet-node
+ 2) créer un fichier Dockerfile dans ce répertoire
+    - vi my-projet-node/Dockerfile
+ 3) Utiliser l'image "my-node" du reigstry local :localhost:5000/my-node
+ 4) Installer npm
+ 5) Importer le code source dans l'image (ex sous /app/
+ 6) Sepossitionner sous /app
+ 7) lancer npm install
+ 8) Exposer le port 
+ 
+ 
+ 
