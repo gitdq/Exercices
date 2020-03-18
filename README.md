@@ -33,7 +33,7 @@
  **************************************************************************************************************************
 
 exo2: L'objectif est de démarrer une application via Dockerfile from Scratch
-      Constuire ne image à partir en allant récupérer le Centos en .zip
+      Constuire une image en allant récupérer le Centos en .zip
 
 - Récupérer le fichier : CentOS-7-20140625-x86_64-docker_01.img.tar.xz
    - wget https://buildlogs.centos.org/centos/7/docker/CentOS-7-20140625-x86_64-docker_01.img.tar.xz
@@ -47,7 +47,7 @@ exo2: L'objectif est de démarrer une application via Dockerfile from Scratch
    - ADD CentOS-7-20140625-x86_64-docker_01.img.tar.xz /
    (Docker construira votre image en s'appuyant sur le fichier zip Centos récupéré avec wget)
    
-- Lancer un Build pour construire i'image
+- Lancer un Build pour construire l'image
    - docker build .
    
 - Donner un nom à votre build, de manière à ne pas avoir à mémoriser par coeur les id   
@@ -61,18 +61,7 @@ exo2: L'objectif est de démarrer une application via Dockerfile from Scratch
      
  **************************************************************************************************************************
  
- exo3: l'objectif est de démarrer une application Node (en utilisant un Dockerfile)
- 
- 1) Créer un dossier my-projet-node
-    - mkdir my-projet-node
- 2) Créer un fichier Dockerfile dans ce répertoire
-    - vi my-projet-node/Dockerfile
- 3) Utiliser l'image "my-node" du reigstry local :localhost:5000/my-node
- 4) Installer npm
- 5) Importer le code source dans l'image (ex sous /app/
- 6) Se positionner sous /app
- 7) lancer npm install
- 8) Exposer le port 
+ exo3: l'objectif est d'utiliser Docker-compose
  
  
  
